@@ -15,10 +15,9 @@ await leapwork.step("Click “Record after this step” in the step context menu
 }, { action: "click" });
 
 // ai-studio-step-id: pw1reg5yk0
-await leapwork.step("Click the video canvas showing 'Waiting for video stream...'", async () => {
-    const canvas = page.locator('.video-frame-stage canvas');
-    await canvas.waitFor({ state: 'visible', timeout: 30000 });
-    await canvas.click({ force: true });
+await leapwork.step("Click the “Waiting for video stream...” video canvas in Leapwork Play", async () => {
+    // Click canvas
+    await page.locator('canvas').first().click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw15iin4p0
