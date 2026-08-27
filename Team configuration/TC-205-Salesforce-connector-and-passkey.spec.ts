@@ -200,13 +200,13 @@ await leapwork.step("Click the Connector dropdown currently set to “(No connec
 await leapwork.step("Click the Connector dropdown and select Salesforce - SF regression conn", async () => {
     // Click span
     await page.getByText('Salesforce - SF regression').click();
-}, { action: "click", relativeXpath: "//*[@id=\"fluent-option_r_d_\"]/span[2]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw10wmwk60
 await leapwork.step("Validate the Connector on Leapwork Play is \"Salesforce - SF regression conn\"", async () => {
     // Assert span contains "Salesforce - SF regression conn"
     await expect(page.getByRole('combobox', { name: 'Connector' })).toContainText("Salesforce - SF regression conn");
-}, { action: "validate", relativeXpath: ".//div[2]/div/div[2]/div/button[@aria-label=\"Connector\"]/span[1]" });
+}, { action: "validate" });
 
 // ai-studio-step-id: pwa3xaht00
 await leapwork.step("Click Connect to connect to the Google Chromium browser in North Europe (Ireland)", async () => {
