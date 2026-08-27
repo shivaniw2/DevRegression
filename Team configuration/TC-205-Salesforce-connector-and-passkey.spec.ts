@@ -213,13 +213,13 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
     // Click button "Connect"
     await page.getByRole('button', { name: 'Connect' }).click();
     await page.waitForTimeout(5000);
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div[1]/div[3]/button" });
+}, { action: "click" });
 
 // ai-studio-step-id: pwdt5beb00
 await leapwork.step("Right-click VariablesReferences in Leapwork Play", async () => {
     // Right-click div
     await page.getByText('VariablesReferences').click({ button: 'right' });
-}, { action: "click", relativeXpath: ".//div/div[2]/div[2]/div[2]/div[1]/div[2]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pwux3wa700
 await leapwork.step("Click Insert step to add a step below step 1", async () => {
