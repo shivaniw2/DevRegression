@@ -225,13 +225,13 @@ await leapwork.step("Right-click VariablesReferences in Leapwork Play", async ()
 await leapwork.step("Click Insert step to add a step below step 1", async () => {
     // Click span
     await page.getByText('Insert step').click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[@aria-label=\"Context menu\"]/div/span/span[2]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw1h85la20
 await leapwork.step(`Fill the Description / outline field with "${lw__descriptionOutline}"`, async () => {
     // Fill textbox "Description / outline"
     await page.getByRole('textbox', { name: 'Description / outline' }).fill(String(lw__descriptionOutline));
-}, { action: "input", relativeXpath: ".//div[2]/div[2]/div/div[2]/label[1]/textarea" });
+}, { action: "input" });
 
 // ai-studio-step-id: pw1m7eyqy0
 await leapwork.step("Fill the Playwright code", async () => {
@@ -252,31 +252,31 @@ await page.keyboard.press(process.platform === "darwin" ? "Meta+V" : "Control+V"
 await leapwork.step("Click Insert step to add a new test step", async () => {
     // Click span
     await page.getByRole('button', { name: 'Insert step', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[3]/button[2]/span" });
+}, { action: "click" });
 
 // ai-studio-step-id: pwnyb01e00
 await leapwork.step("Right-click “Navigate to passKey page” in Leapwork Play", async () => {
     // Right-click span
     await page.getByText('Navigate to passKey page', { exact: true }).click({ button: 'right' });
-}, { action: "click", relativeXpath: ".//div/div/div/div[3]/div[@aria-label=\"Navigate to passKey page\"]/span" });
+}, { action: "click" });
 
 // ai-studio-step-id: pwv4deyp00
 await leapwork.step("Click the Insert step menu item", async () => {
     // Click span
     await page.getByText('Insert step').click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[@aria-label=\"Context menu\"]/div[2]/span[1]/span[2]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw1nbe0gi0
 await leapwork.step("Click “Below this step” in the step context menu", async () => {
     // Click span
     await page.getByText('Below this step').click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[@aria-label=\"Submenu\"]/div[2]/span/span" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw18s3na50
 await leapwork.step(`Fill the Description / outline field with "${lw__descriptionOutline}"`, async () => {
     // Fill textbox "Description / outline"
     await page.getByRole('textbox', { name: 'Description / outline' }).fill(String(lw__descriptionOutline));
-}, { action: "input", relativeXpath: ".//div[2]/div[2]/div/div[2]/label[1]/textarea" });
+}, { action: "input" });
 
 // ai-studio-step-id: pw1uh851c0
 await leapwork.step("Fill the typescript with external adapter to enable LLM based code generation", async () => {
@@ -306,14 +306,14 @@ await page.keyboard.press(process.platform === "darwin" ? "Meta+V" : "Control+V"
 await leapwork.step("Click Insert step in the test case steps panel", async () => {
     // Click span
     await page.getByRole('button', { name: 'Insert step', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[3]/button[2]/span" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw1yiv4490
 await leapwork.step("Click the Run button in the Leapwork Play test case.", async () => {
     // Click button "Run"
     await page.getByRole('button', { name: 'Run' }).click();
     await page.waitForTimeout(45000);
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pw1c6r3o70
 await leapwork.step("Validate that all steps are executed", async () => {
